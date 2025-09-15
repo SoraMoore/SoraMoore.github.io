@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
+<style>
+  img {
+    height: 200px;
+  }
+</style>
+
+<body>
+  <p id="counter">button 0</p>
+  <img id="button" src="https://m.media-amazon.com/images/I/41HlBXin96L._UF894,1000_QL80_.jpg">
+  <img id="bagofbutton"
+    src="https://www.moodfabrics.com/media/catalog/product/cache/b4e03883b036a97450809276a28e2517/1/0/102139.jpg">
+</body>
+
+</html>
+<script>
+  //upgrade
+  /*
+  when bought upgrade to 2 per click
+  */
+
+
+  var score = 0
+  var scorePerClick = 1
+  document.getElementById("button").addEventListener("click", scoreGoUp)
+  function scoreGoUp() {
+    score = score + scorePerClick
+    document.getElementById("counter").innerText = "button " + score
+  }
+
+  document.getElementById("bagofbutton").addEventListener("click", clickperclick)
+  function clickperclick (){
+    if(score>4){
+      scorePerClick = 2
+    score = score - 5
+    }
+    document.getElementById("counter").innerText = "button " + score
+  }
+
+
+
+
+</script>
