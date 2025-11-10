@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style>
+      #box {
+        position: absolute;
+        top: 283px;
+        right: 670px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="box"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjMXa_dq-UmdE0fUdCXe_Eg4nijr9lI3E5lEsJzfrEB_usCQl7:https://64.media.tumblr.com/d816ce37cdd8072913f5afc88e390515/7764375b5ff8c209-4b/s500x750/ad6e66d91004466f9c651b7938ff41f568907a18.png&s"
+      width="100"
+      height="100"
+    />
+  </body>
+</html>
+<script>
+  var positionX = 0;
+  var positionY = 0;
+  var direction = 5;
+
+  setInterval(moveBox, 100);
+
+  function moveBox() {
+    //if the box positon = the wall change the box's direction
+    document.getElementById("box").style.left = positionX + "px";
+    document.getElementById("box").style.top = positionY + "px";
+    positionX = positionX + direction;
+    positionY = positionY + direction;
+    if (positionX > 300) {
+      direction = -5;
+    }
+    //
+    if (positionX < 0) {
+      direction = 5;
+    }
+    if (positionY < 0) {
+      direction = 5;
+    }
+    if (positionY > 300) {
+      direction = -5;
+    }
+  }
+</script>
