@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #person {
+        display: none;
+      }
+
+      #canvas {
+        border-style: solid;
+
+        border-width: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="canvas" height="700" width="1400"> </canvas>
+    <img id="person" src="New Piskel.png" />
+  </body>
+</html>
+
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  var person = document.getElementById("person");
+  window.onload = function () {
+    setInterval(animate, 50);
+  };
+  var littleGuy = 32;
+  function animate() {
+    ctx.clearRect(0,0,2000,2000)
+    ctx.drawImage(person, 0, 15, 32, 32, 10, 10, 100, 100);
+    littleGuy = 0
+  }
+</script>
