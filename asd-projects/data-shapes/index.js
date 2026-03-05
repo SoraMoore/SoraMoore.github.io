@@ -28,6 +28,7 @@ $(document).ready(function () {
 
   // This line produces most of the data array and stores it in the variable "dataShapes"
   const dataShapes = generateShapeData();
+
   var currentIndex = 0;
 
   /////////////////////////////////////////////////
@@ -35,19 +36,36 @@ $(document).ready(function () {
   /////////////////////////////////////////////////
 
   // TODO 1: create a new shape object and add it to the array
-  
 
+  // Todo 0 complete 
+  var shape = {
+    color: "blue",
+    shape: "circle",
+    repeat: 3,
+  }
+
+  dataShapes.push(shape)
   // TODO 2: add a new property to all data shapes
-  
+  for (var i = 0; i < dataShapes.length; i++) {
+    CurrentShape.color
+  }
+  if(color === "red"){
+    goodBehavior = "bounce"
+  }elseif(color === "blue"){
+    goodBehavior = "blink"
+  }else{
+    goodBehavior = "spin"
+  }
+
 
   // TODO 3-a: add a function that handles the static display type
-  
+
 
   // TODO 4-a: add a function that handles the good display type
-  
+
 
   // TODO 5-a: add a function that handles the bad display type
-  
+
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
@@ -55,17 +73,17 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    
+
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    
+
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-    
+
   }
 
   /////////////////////////////////////////////////
@@ -209,14 +227,14 @@ $(document).ready(function () {
     animationDetails.y += animationDetails.speedY;
     if (
       animationDetails.x + $("#shape").width() + 8 >=
-        $("#shape-container").width() ||
+      $("#shape-container").width() ||
       animationDetails.x < 2
     ) {
       animationDetails.speedX *= -1;
     }
     if (
       animationDetails.y + $("#shape").height() + 4 >=
-        $("#shape-container").height() ||
+      $("#shape-container").height() ||
       animationDetails.y < 2
     ) {
       animationDetails.speedY *= -1;
